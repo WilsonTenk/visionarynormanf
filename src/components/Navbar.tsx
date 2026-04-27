@@ -31,12 +31,11 @@ export default function Navbar({ currentPage, onNavigate, isMenuOpen, setIsMenuO
           onClick={() => handleNav('home')}
         >
           <div className="relative w-14 h-14 flex items-center justify-center overflow-hidden rounded-xl bg-slate-50 border border-slate-100 shadow-sm">
-            {/* Placeholder for actual logo image */}
+            {/* Logo image */}
             <img 
-              src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=100&h=100&fit=crop" 
-              alt="Logo" 
+              src="/visionarynormanf/logo.jpg" 
+              alt="Visionary Norman Foundation Logo" 
               className="w-full h-full object-contain p-1 group-hover:scale-110 transition-transform duration-500"
-              referrerPolicy="no-referrer"
             />
           </div>
         </div>
