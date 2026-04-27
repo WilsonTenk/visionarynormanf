@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-navy: #001A4D;
+  --color-vnf-pink: #EE3766;
+  --color-vnf-navy: #003B95;
+  --color-vnf-blue: #00AEEF;
+  --color-vnf-green: #99CC33;
+
+  --color-brand-blue: var(--color-vnf-blue);
+  --color-brand-teal: var(--color-vnf-green);
+  --color-brand-accent: var(--color-vnf-pink);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-vnf-navy;
+  }
+}
+
+@layer components {
+  .mobile-container {
+    @apply px-5 sm:px-6;
+  }
+
+  .mobile-card {
+    @apply rounded-[2.5rem] p-8 sm:p-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 sm:py-3 bg-linear-to-br from-vnf-navy to-vnf-blue text-white rounded-2xl sm:rounded-xl font-bold transition-all hover:-translate-y-0.5 active:scale-95 hover:shadow-xl hover:shadow-vnf-blue/20 cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 sm:py-3 border-2 border-vnf-navy/10 text-vnf-navy rounded-2xl sm:rounded-xl font-bold transition-all hover:bg-vnf-navy/5 active:scale-95 cursor-pointer;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-4 sm:py-3 bg-vnf-pink text-white rounded-2xl sm:rounded-xl font-bold transition-all hover:-translate-y-0.5 active:scale-95 hover:shadow-xl hover:shadow-vnf-pink/20 cursor-pointer;
+  }
+}
+
+.hero-grid {
+  background-image: 
+    linear-gradient(rgba(0, 174, 239, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 174, 239, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
