@@ -17,12 +17,12 @@ export default function About({ onNavigate }: AboutProps) {
   ];
 
   const team = [
-    { name: 'Abraham Norman Nortey', role: 'Founder & CEO', color: 'bg-vnf-navy' },
-    { name: 'Dr. Abena Yeboah', role: 'Director', color: 'bg-vnf-green' },
-    { name: 'Emmanuel Brobbery', role: 'Executive Secretary', color: 'bg-indigo-600' },
-    { name: 'Dr. Sussie Anku', role: 'Head of Reproductive Health', color: 'bg-vnf-pink' },
-    { name: 'Lauren Baaba Annan', role: 'Tertiary Institutional Head', color: 'bg-amber-600' },
-    { name: 'Dr. Abigail Adu', role: 'Project Manager', color: 'bg-vnf-blue' },
+    { name: 'Abraham Norman Nortey', role: 'Founder & CEO', color: 'bg-vnf-navy', img: '/visionarynormanf/images/Norman pc.jpg' },
+    { name: 'Dr. Abena Yeboah', role: 'Director', color: 'bg-vnf-green', img: '/visionarynormanf/images/Dr. Abena Yeboah.jpg' },
+    { name: 'Emmanuel Brobbery', role: 'Executive Secretary', color: 'bg-indigo-600', img: '/visionarynormanf/images/Emmanuel Brobbery pc.jpg' },
+    { name: 'Dr. Sussie Anku', role: 'Head of Reproductive Health', color: 'bg-vnf-pink', img: '/visionarynormanf/images/Dr. Sussie Anku.jpg' },
+    { name: 'Lauren Baaba Annan', role: 'Tertiary Institutional Head', color: 'bg-amber-600', img: '/visionarynormanf/images/Baaba pc.jpg' },
+    { name: 'Dr. Abigail Adu', role: 'Project Manager', color: 'bg-vnf-blue', img: '/visionarynormanf/images/Dr. Abigail Adu.png' },
   ];
 
   return (
@@ -49,9 +49,10 @@ export default function About({ onNavigate }: AboutProps) {
       <section className="py-20 lg:py-32 px-5 sm:px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <div className="inline-block px-4 py-1.5 bg-vnf-blue/10 rounded-full text-vnf-blue text-[10px] font-bold tracking-widest uppercase mb-6">
               Our Journey
@@ -70,10 +71,10 @@ export default function About({ onNavigate }: AboutProps) {
               ].map((item, i, arr) => (
                 <motion.div 
                   key={item.year} 
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 8 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ delay: i * 0.07, duration: 0.35, ease: 'easeOut' }}
                   className="flex gap-6 sm:gap-8 group"
                 >
                   <div className="flex flex-col items-center">
@@ -92,10 +93,11 @@ export default function About({ onNavigate }: AboutProps) {
             </div>
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className="bg-vnf-navy rounded-[2.5rem] p-10 sm:p-12 overflow-hidden relative group/hero shadow-2xl shadow-vnf-navy/20"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-vnf-blue/20 blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -109,10 +111,10 @@ export default function About({ onNavigate }: AboutProps) {
               ].map((stat, i) => (
                 <motion.div 
                   key={stat.label} 
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 16 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 + i * 0.1 }}
-                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 + i * 0.07, duration: 0.35, ease: 'easeOut' }}
+                  viewport={{ once: true, margin: '-40px' }}
                   className="p-6 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-xl flex justify-between items-center hover:bg-white/[0.08] transition-all relative overflow-hidden group/stat"
                 >
                   <div className="absolute inset-0 bg-linear-to-r from-vnf-green/5 to-transparent opacity-0 group-hover/stat:opacity-100 transition-opacity" />
@@ -160,12 +162,12 @@ export default function About({ onNavigate }: AboutProps) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {values.map((v, i) => (
-              <motion.div 
-                key={v.title} 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
+              <motion.div
+                key={v.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ delay: i * 0.05, duration: 0.4, ease: 'easeOut' }}
                 className="p-8 sm:p-10 bg-white/60 backdrop-blur-md rounded-[2.5rem] border border-slate-200/50 hover:border-vnf-blue/20 hover:shadow-[0_32px_64px_-16px_rgba(0,59,149,0.08)] transition-all text-center group"
               >
                 <div className="w-16 h-16 rounded-2xl bg-vnf-blue/5 flex items-center justify-center text-vnf-blue mx-auto mb-8 group-hover:bg-vnf-blue group-hover:text-white transition-all shadow-sm group-hover:shadow-vnf-blue/20">
@@ -199,16 +201,22 @@ export default function About({ onNavigate }: AboutProps) {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {team.map((m, i) => (
-            <motion.div 
-              key={m.name} 
-              initial={{ opacity: 0, y: 30 }}
+            <motion.div
+              key={m.name}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ delay: i * 0.07, duration: 0.4, ease: 'easeOut' }}
               className="group bg-white rounded-[2.5rem] border border-slate-200/60 overflow-hidden hover:shadow-2xl transition-all"
             >
-              <div className={`h-72 sm:h-80 ${m.color} relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-vnf-navy/20 group-hover:bg-vnf-navy/0 transition-colors" />
+              <div className="h-72 sm:h-80 relative overflow-hidden">
+                <img
+                  src={m.img}
+                  alt={m.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).parentElement!.classList.add(m.color); }}
+                />
+                <div className="absolute inset-0 bg-vnf-navy/10 group-hover:bg-vnf-navy/0 transition-colors" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-10 pt-20 bg-linear-to-t from-vnf-navy/90 via-vnf-navy/40 to-transparent">
                   <div className="text-white font-serif text-sm sm:text-base font-bold mb-1 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all">
                     Professional, Dedicated, Visionary

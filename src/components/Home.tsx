@@ -15,18 +15,18 @@ export default function Home({ onNavigate }: HomeProps) {
   ];
 
   const programs = [
-    { icon: GraduationCap, color: 'from-vnf-navy to-vnf-blue', title: 'Educational Outreach', desc: 'Scholarships, tutoring, and school supply drives to promote access to quality education.' },
-    { icon: Activity, color: 'from-vnf-green to-emerald-500', title: 'Public Health Initiatives', desc: 'Community health screenings, vaccination campaigns, and health education for all ages.' },
-    { icon: Venus, color: 'from-vnf-pink to-rose-400', title: 'Menstrual Hygiene', desc: 'Distributing sanitary products and providing health education to empower girls.' },
-    { icon: Handshake, color: 'from-amber-600 to-vnf-green', title: 'Social Support', desc: 'Providing food, shelter, and essentials to vulnerable groups across communities.' },
-    { icon: Stethoscope, color: 'from-vnf-blue to-cyan-400', title: 'Medical Programs', desc: 'Mobile clinics and specialist outreach for underserved populations across Ghana.' },
-    { icon: Building2, color: 'from-vnf-navy to-slate-600', title: 'Community Development', desc: 'Skills training and leadership development for resilient, self-sustaining communities.' },
+    { icon: GraduationCap, color: 'from-vnf-navy to-vnf-blue', title: 'Educational Outreach', desc: 'Scholarships, tutoring, and school supply drives to promote access to quality education.', bg: '/visionarynormanf/images/school 1.jpg' },
+    { icon: Activity, color: 'from-vnf-green to-emerald-500', title: 'Public Health Initiatives', desc: 'Community health screenings, vaccination campaigns, and health education for all ages.', bg: '/visionarynormanf/images/VNF 8.jpg' },
+    { icon: Venus, color: 'from-vnf-pink to-rose-400', title: 'Menstrual Hygiene', desc: 'Distributing sanitary products and providing health education to empower girls.', bg: '/visionarynormanf/images/women.jpg' },
+    { icon: Handshake, color: 'from-amber-600 to-vnf-green', title: 'Social Support', desc: 'Providing food, shelter, and essentials to vulnerable groups across communities.', bg: '/visionarynormanf/images/Lambussie 1.jpg' },
+    { icon: Stethoscope, color: 'from-vnf-blue to-cyan-400', title: 'Medical Programs', desc: 'Mobile clinics and specialist outreach for underserved populations across Ghana.', bg: '/visionarynormanf/images/VNF 9.jpg' },
+    { icon: Building2, color: 'from-vnf-navy to-slate-600', title: 'Community Development', desc: 'Skills training and leadership development for resilient, self-sustaining communities.', bg: '/visionarynormanf/images/vnf 4.jpg' },
   ];
 
   const news = [
-    { date: 'August 2025', title: '2025 Scholarship Portal Open', desc: 'The 2025 Scholarship Portal is officially open! Students are encouraged to apply for support.', link: 'https://tinyurl.com/VNFScholarship', cta: 'Apply Now' },
-    { date: 'February 2024', title: 'Feed the Street Cape Coast', desc: 'Our food distribution initiative provided meals to over 800 vulnerable people across Cape Coast.', link: 'https://share.google/K2NjTJBZ8uEEqJutO', cta: 'Read More' },
-    { date: 'September 2024', title: 'Outreach at Kyeaboso', desc: 'We equipped students with essential supplies and conducted vision screenings.', link: 'https://share.google/N6vZ7Bt3dIkPOl8uB', cta: 'Read More' },
+    { date: 'August 2025', title: '2025 Scholarship Portal Open', desc: 'The 2025 Scholarship Portal is officially open! Students are encouraged to apply for support.', link: 'https://tinyurl.com/VNFScholarship', cta: 'Apply Now', img: '/visionarynormanf/images/scholarship pc.png' },
+    { date: 'February 2024', title: 'Feed the Street Cape Coast', desc: 'Our food distribution initiative provided meals to over 800 vulnerable people across Cape Coast.', link: 'https://share.google/K2NjTJBZ8uEEqJutO', cta: 'Read More', img: '/visionarynormanf/images/fts 1.jpg' },
+    { date: 'September 2024', title: 'Outreach at Kyeaboso', desc: 'We equipped students with essential supplies and conducted vision screenings.', link: 'https://share.google/N6vZ7Bt3dIkPOl8uB', cta: 'Read More', img: '/visionarynormanf/images/VNF 7.jpg' },
   ];
 
   return (
@@ -34,16 +34,16 @@ export default function Home({ onNavigate }: HomeProps) {
       {/* Hero Section */}
       <section className="relative min-h-[calc(100vh-68px)] bg-vnf-navy flex items-center">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-15" />
+          <img src="/visionarynormanf/images/VNF 6.jpg" alt="VNF Community" className="absolute inset-0 w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-linear-to-br from-vnf-navy/90 via-vnf-blue/40 to-transparent" />
           <div className="absolute inset-0 hero-grid" />
         </div>
 
         <div className="relative z-1 max-w-7xl mx-auto px-5 py-20 lg:py-32 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center flex flex-col lg:flex-row text-center lg:text-left">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="flex flex-col items-center lg:items-start"
           >
             <h1 className="font-serif text-[2.75rem] sm:text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6">
@@ -102,7 +102,8 @@ export default function Home({ onNavigate }: HomeProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
             className="text-center lg:text-left"
           >
             <div className="inline-block px-4 py-1.5 bg-vnf-green/10 rounded-full text-vnf-green text-[10px] font-bold tracking-widest uppercase mb-6">
@@ -122,12 +123,12 @@ export default function Home({ onNavigate }: HomeProps) {
               { icon: Eye, title: 'Our Vision', desc: 'A world rooted in equity, dignity, and sustainable development where every community thrives.' },
               { icon: Star, title: 'Our Values', desc: 'Integrity, compassion, excellence, and a commitment to community-led solutions that endure.' },
             ].map((card, idx) => (
-              <motion.div 
-                key={card.title} 
-                initial={{ opacity: 0, x: 20 }}
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, x: 16 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ delay: idx * 0.07, duration: 0.4, ease: 'easeOut' }}
                 whileHover={{ scale: 1.02 }}
                 className="p-6 rounded-3xl bg-white/[0.03] border border-white/5 backdrop-blur-xl flex gap-6 hover:bg-white/[0.08] hover:border-white/10 transition-all shadow-sm"
               >
@@ -148,9 +149,10 @@ export default function Home({ onNavigate }: HomeProps) {
       <section className="py-20 lg:py-32 px-5 sm:px-6 bg-slate-50">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
           >
             <div className="inline-block px-4 py-1.5 bg-vnf-blue/10 rounded-full text-vnf-blue text-[10px] font-bold tracking-widest uppercase mb-4">
               What We Do
@@ -166,19 +168,26 @@ export default function Home({ onNavigate }: HomeProps) {
           {programs.map((prog, i) => (
             <motion.div
               key={prog.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: (i % 3) * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ delay: (i % 3) * 0.06, duration: 0.4, ease: 'easeOut' }}
+              viewport={{ once: true, margin: '-50px' }}
               onClick={() => onNavigate('programs')}
-              className="group bg-white rounded-[2.5rem] border border-slate-200/60 overflow-hidden hover:shadow-[0_32px_64px_-16px_rgba(0,59,149,0.1)] hover:border-vnf-blue/20 transition-all cursor-pointer group hover:-translate-y-2"
+              className="group bg-white rounded-[2.5rem] border border-slate-200/60 overflow-hidden hover:shadow-[0_32px_64px_-16px_rgba(0,59,149,0.1)] hover:border-vnf-blue/20 transition-all cursor-pointer hover:-translate-y-1"
             >
               <div className={`h-40 sm:h-44 bg-linear-to-br ${prog.color} flex items-end p-8 relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-vnf-navy/10 group-hover:bg-vnf-navy/0 transition-colors" />
-                <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white relative z-1 ring-1 ring-white/30">
+                {/* Faint background photo */}
+                <img
+                  src={prog.bg}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity group-hover:opacity-30 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-linear-to-br from-black/10 to-transparent" />
+                <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white relative z-10 ring-1 ring-white/30">
                   <prog.icon size={24} />
                 </div>
-                <div className="absolute top-6 right-6 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[9px] font-black text-white uppercase tracking-[1.5px] z-1 border border-white/10">
+                <div className="absolute top-6 right-6 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[9px] font-black text-white uppercase tracking-[1.5px] z-10 border border-white/10">
                   Impact
                 </div>
               </div>
@@ -224,10 +233,10 @@ export default function Home({ onNavigate }: HomeProps) {
             ].map((item, i) => (
               <motion.div 
                 key={item.label}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ delay: i * 0.07, duration: 0.4, ease: 'easeOut' }}
+                viewport={{ once: true, margin: '-50px' }}
                 className="p-6 sm:p-8 text-center bg-white/[0.03] border border-white/5 rounded-[2.5rem] backdrop-blur-xl hover:bg-white/[0.08] transition-all group overflow-hidden relative"
               >
                 <div className="absolute inset-0 bg-linear-to-b from-vnf-green/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -262,19 +271,24 @@ export default function Home({ onNavigate }: HomeProps) {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {news.map((item, i) => (
-            <motion.div 
+            <motion.div
               key={item.title}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.07, duration: 0.4, ease: 'easeOut' }}
+              viewport={{ once: true, margin: '-50px' }}
               className="group bg-white rounded-[2.5rem] border border-slate-200 overflow-hidden hover:shadow-2xl transition-all"
             >
               <div className="h-52 sm:h-56 bg-slate-200 overflow-hidden relative">
-                <div className="absolute top-4 left-4 z-1 px-3 py-1 bg-vnf-navy/80 backdrop-blur-md rounded-full text-[10px] font-bold text-white tracking-widest">
+                <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-vnf-navy/80 backdrop-blur-md rounded-full text-[10px] font-bold text-white tracking-widest">
                   {item.date}
                 </div>
-                <div className="w-full h-full bg-linear-to-br from-vnf-blue to-vnf-green transform group-hover:scale-105 transition-transform duration-500" />
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display='none'; (e.currentTarget.parentElement as HTMLElement).classList.add('bg-gradient-to-br','from-vnf-blue','to-vnf-green'); }}
+                />
               </div>
               <div className="p-8 sm:p-10">
                 <h3 className="text-xl font-bold text-vnf-navy mb-4 group-hover:text-vnf-blue transition-colors line-clamp-2">{item.title}</h3>
@@ -312,12 +326,12 @@ export default function Home({ onNavigate }: HomeProps) {
               { initial: 'MT', name: 'Michael Thompson', role: 'Volunteer', quote: 'Volunteering with this foundation has been incredibly rewarding. Seeing the direct impact on youth keeps me motivated every day.' },
               { initial: 'LW', name: 'Dr. Lisa Williams', role: 'Community Partner', quote: 'Our partnership with VNF allowed us to extend our community health initiatives to reach twice as many people as before.' },
             ].map((testi, i) => (
-              <motion.div 
+              <motion.div
                 key={testi.name}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ delay: i * 0.08, duration: 0.45, ease: 'easeOut' }}
                 className="p-8 sm:p-10 bg-white rounded-[2.5rem] border border-slate-200 hover:border-vnf-blue/30 transition-all shadow-sm"
               >
                 <div className="flex gap-1 text-amber-400 mb-6">

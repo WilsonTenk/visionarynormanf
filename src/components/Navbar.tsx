@@ -14,6 +14,7 @@ export default function Navbar({ currentPage, onNavigate, isMenuOpen, setIsMenuO
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'programs', label: 'Programs' },
+    { id: 'gallery', label: 'Gallery' },
     { id: 'contact', label: 'Contact' },
     { id: 'involved', label: 'Get Involved', isCTA: true },
   ];

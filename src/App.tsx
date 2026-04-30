@@ -7,6 +7,7 @@ import About from './components/About';
 import Programs from './components/Programs';
 import Contact from './components/Contact';
 import Involved from './components/Involved';
+import Gallery from './components/Gallery';
 import { Page } from './types';
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
       case 'programs': return <Programs onNavigate={setCurrentPage} />;
       case 'contact': return <Contact />;
       case 'involved': return <Involved />;
+      case 'gallery': return <Gallery />;
       default: return <Home onNavigate={setCurrentPage} />;
     }
   };

@@ -11,6 +11,7 @@ export default function Footer({ onNavigate }: FooterProps) {
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
     { id: 'programs', label: 'Programs' },
+    { id: 'gallery', label: 'Gallery' },
     { id: 'contact', label: 'Contact' },
   ];
 
